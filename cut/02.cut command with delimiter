@@ -1,0 +1,31 @@
+ajinkya@hcl-rapid-platform:~$ cat data.txt
+ID,Name,Salary,Country
+
+1,Pol,25000,India
+2,Bont,45000,Belgium
+3,Loki,55000,Germany
+4,Hina,35000,India
+
+ajinkya@hcl-rapid-platform:~$ cut -d, -f 2 data.txt     # To get 2nd column values from delimted comma separated file
+Name
+
+Pol
+Bont
+Loki
+Hina
+
+ajinkya@hcl-rapid-platform:~$ cut -d, -f 2- data.txt    # To get 2nd onwards all column values from delimted comma separated file
+Name,Salary,Country
+
+Pol,25000,India
+Bont,45000,Belgium
+Loki,55000,Germany
+Hina,35000,India
+
+ajinkya@hcl-rapid-platform:~$ cut -d, -f 1- data.txt --output-delimiter="|"    # To change delimiter value from , to |
+ID|Name|Salary|Country
+
+1|Pol|25000|India
+2|Bont|45000|Belgium
+3|Loki|55000|Germany
+4|Hina|35000|India
